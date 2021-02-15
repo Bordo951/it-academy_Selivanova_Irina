@@ -5,7 +5,7 @@ function countVowelsNumber(str) {
         return ;
     }
 
-    let arr = str.split(''),
+    let arr = str.toLowerCase().split(''),
         vowelsArr = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'],
         counter = 0;
 
