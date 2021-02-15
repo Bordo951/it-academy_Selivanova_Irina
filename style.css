@@ -1,0 +1,29 @@
+.click-me-button__wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.click-me-button__button {
+    width: 150px;
+    height: 50px;
+    font-family: cursive;
+    font-size: 18px;
+    border-radius: 15px;
+}
+.click-me-button__button:hover {
+    background-image: linear-gradient(90deg, #00c0ff, #ffcf00 49%, #fc4f4f 80%, #00c0ff);
+    animation: slidebg 5s linear infinite;
+}
+
+.click-me-button__button:focus {
+    outline: 0;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw
+    }
+}
