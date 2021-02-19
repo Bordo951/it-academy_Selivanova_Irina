@@ -23,6 +23,7 @@ function myTrim(str) {
 function callPromptA2Plus() {
     let str = prompt('Please, enter you massage');
 
+    if (str === null) return;
     console.log(myTrim(str));
 }
 
