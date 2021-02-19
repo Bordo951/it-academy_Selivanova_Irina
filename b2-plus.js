@@ -7,6 +7,8 @@ function revertString(str) {
 function callPromptB2Plus(){
     let message = prompt('Please, enter you message');
 
+    if (message === null) return;
+
     console.log(revertString(message));
 }
 
