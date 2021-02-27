@@ -12,8 +12,6 @@ getDrinkHtml.addEventListener('click', getDrinkInformation);
 deleteDrinkHtml.addEventListener('click', deleteDrink);
 vewDrinkListHtml.addEventListener('click', vewDrinkList);
 
-let drinkStorage = new HashStorageFunc();
-
 function getNewDrinkFromForm() {
     for (let i = 0; i < alcoholBeverageHtml.length; i++) {
         if (alcoholBeverageHtml[i].checked) {
@@ -79,43 +77,7 @@ function deleteDrink() {
 }
 
 function vewDrinkList() {
-    alert(drinkStorage.getKeys());
+    openPopUp();
 }
 
-//Class-function
-function HashStorageFunc() {
-    let self = this;
-        this.hash = [];
-
-    self.addValue = function (key,value) {
-        this.hash[key] = value;
-    }
-
-    self.getValue = function (key) {
-        return this.hash[key];
-    }
-
-    self.deleteValue = function (key) {
-        if (this.hash[key]) {
-            delete this.hash[key];
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    self.getKeys = function () {
-        return Object.keys(this.hash);
-    }
-
-    self.viewHash = function () {
-        console.log(self.hash);
-    }
-}
-
-
-// drinkStorage.addValue('B-52', {
-//     isAlcohol: true,
-//     recipe: '15мл Калуа, 15 мл Бейлис, 15 мл Куантро, поджечь'
-// });
 console.log(drinkStorage.getKeys());

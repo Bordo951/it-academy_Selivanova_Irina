@@ -6,7 +6,8 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>DRINKS-HASH-FUNC</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/pop-up.css" rel="stylesheet">
     </head>
     <body>
     <main>
@@ -30,6 +31,18 @@
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <div class="overlay"></div>
+    <div class="pop-up">
+        <div class="close-pop-up">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+            <label class="close">close</label>
+        </div>
+        <h2 class="pop-up__title">Список напитков</h2>
+        <ol class="pop-up__content"></ol>
+    </div>
+    <script src="js/hash-storage-func.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>
     </body>
 </html>
