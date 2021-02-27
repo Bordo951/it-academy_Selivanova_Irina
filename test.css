@@ -1,0 +1,15 @@
+aside > .ui.sticky > .ui.segment {
+    background: #8fc84d;
+}
+
+a > .ui.icon.header > p {
+    color: #fff;
+}
+
+.ui.segment > a > .ui.green.large.button {
+    background: #f26336;
+}
+
+.ui.segment > a > .ui.green.large.button:hover {
+    background: #b34a28;
+}
