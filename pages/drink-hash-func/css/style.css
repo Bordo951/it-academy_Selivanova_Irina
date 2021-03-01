@@ -1,0 +1,205 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(23, 7, 0, .9);
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/bar.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 462px;
+    text-align: center;
+    color: white;
+    box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+.container {
+    width: 70%;
+    padding: 25px 0;
+    background: rgba(23, 7, 0, .8);
+    transition: .2s;
+}
+
+.drink-form {}
+
+.drink-form__title {
+    margin: 10px 0;
+    font-weight: 300;
+    color: rgb(238, 224, 177);
+}
+
+.drink-form__input,
+textarea {
+    margin: 15px 0;
+    font-size: 16px;
+    padding: 10px;
+    width: 250px;
+    border: 2px solid rgba(150, 90, 62, 1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(23, 7, 0, .8);
+    color: rgb(238, 224, 177);
+    outline: none;
+}
+
+textarea {
+    resize : none;
+    overflow : auto;
+    white-space: pre-wrap;
+}
+
+textarea::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(23, 7, 0, .4);
+    background-color: rgba(150, 90, 62, .3);
+}
+
+textarea::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: rgba(150, 90, 62, .3);
+}
+
+textarea::-webkit-scrollbar-thumb
+{
+    background-color: rgba(23, 7, 0, 1);
+    border: 2px solid rgba(23, 7, 0, .2);
+}
+
+.drink-form__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.drink-form__radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.drink-form__radio+label:focus {
+    outline: 0;
+}
+
+.drink-form__radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid rgb(238, 224, 177);
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.drink-form__radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: rgba(150, 90, 62, 1);
+}
+
+.drink-form__radio:not(:disabled):active+label::before :not(:disabled):active+label::before {
+    background-color: rgba(150, 90, 62, 1);
+    border-color: rgba(150, 90, 62, 1);
+}
+
+.drink-form__radio:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(150, 90, 62, 0.25);
+}
+
+.drink-form__radio:focus:not(:checked)+label::before {
+    border-color: rgba(150, 90, 62, 1);
+}
+
+.drink-form__radio:checked+label::before {
+    border-color: rgb(96, 57, 40);
+    background-color: rgb(96, 57, 40);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.drink-form__radio:disabled+label::before {
+    background-color: rgb(238, 224, 177);
+}
+
+.drink-form__label-title {
+    margin-right: 15px;
+    font-size: 18px;
+    color: rgb(238, 224, 177);
+}
+
+.new-drink-form__enter-btn {
+    border: 2px solid rgba(150, 90, 62, 1);
+    background: rgba(23, 7, 0, .6);
+    font-size: 18px;
+    color: rgb(238, 224, 177);
+    margin: 10px 0;
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.new-drink-form__enter-btn:hover {
+    background: rgba(150, 90, 62, .3);
+    padding: 10px 80px;
+}
+
+.new-drink-form__enter-btn:focus {
+    outline: 0;
+}
+
+.new-drink-form__enter-btn:active {
+    border: 2px solid rgb(238, 224, 177);
+}
+
+.button-panel {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-panel__btn {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+    color: rgb(238, 224, 177);
+    background: rgba(150, 90, 62, .3);
+    border: 2px solid rgba(238, 224, 177, .3);
+}
+.button-panel__btn:hover {
+    background: rgba(96, 57, 40, 1);
+    border: 2px solid rgb(154, 141, 107);
+}
+
+.button-panel__btn:focus {
+    outline: 0;
+}
+
+.button-panel__btn:active {
+    border: 2px solid rgba(23, 7, 0, 1);
+    background: rgba(150, 90, 62, .6);
+}

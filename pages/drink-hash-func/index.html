@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DRINKS-HASH-FUNC</title>
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/pop-up.css" rel="stylesheet">
+    </head>
+    <body>
+    <main>
+        <div class="container">
+            <form id="new-drink-form" class="drink-form">
+                <h2 class="drink-form__title">Ваш любимый напиток</h2>
+                <label for="drink"></label>
+                <input class="drink-form__input" type="text" id="drink" name="drink" placeholder="Название напитка" autocomplete="off"><br>
+                <label class="drink-form__label-title">Алкогольный</label>
+                <input class="drink-form__radio" id="isAlcohol-yes" type="radio" name="isAlcohol" value="yes">
+                <label class="drink-form__label-title" for="isAlcohol-yes">Да</label>
+                <input class="drink-form__radio" id="isAlcohol-no" type="radio" name="isAlcohol" value="no">
+                <label class="drink-form__label-title" for="isAlcohol-no">Нет</label><br>
+                <textarea id="recipe" placeholder="Рецепт напитка..." rows="5"></textarea><br>
+                <input class="new-drink-form__enter-btn" type="submit" value="Добавить напиток">
+            </form>
+            <div class="button-panel">
+                <button class="button-panel__btn" id="get-drink">Информация о напитке</button>
+                <button class="button-panel__btn" id="delete-drink">Удалить напиток</button>
+                <button class="button-panel__btn" id="list-drink">Список напитков</button>
+            </div>
+        </div>
+    </main>
+    <div class="overlay"></div>
+    <div class="pop-up">
+        <div class="close-pop-up">
+            <div class="leftright"></div>
+            <div class="rightleft"></div>
+            <label class="close">close</label>
+        </div>
+        <h2 class="pop-up__title">Список напитков</h2>
+        <ol class="pop-up__content"></ol>
+    </div>
+    <script src="js/hash-storage-func.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>
+    </body>
+</html>
