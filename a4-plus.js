@@ -1,9 +1,9 @@
 const a4PlusButtonHTML = document.getElementById('a4-plus');
 
 function isPalindromeA4(str) {
-    const specialSymbols = [' ', 'ь', 'ъ', '.', ',', ':', ';', '!', '_', '?', '-', '\"', '\''];
+    const specialSymbols = ['ь', 'ъ', '.', ',', ':', ';', '!', '_', '?', '-', '\"', '\''];
 
-    str = str.toLowerCase();
+    str = str.toLowerCase().split(' ').join('');
 
     specialSymbols.forEach((element) => {
         let index = str.indexOf(element);
