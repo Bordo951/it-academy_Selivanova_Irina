@@ -33,6 +33,8 @@ main {
 }
 
 .buttons__wrapper {
+    display: flex;
+    flex-wrap: wrap;
     width: 800px;
     height: calc(100vh - 230px);
     margin: 0 auto;
